@@ -7,16 +7,21 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div id="splash-screen" class="splash-screen" role="img" aria-label="Loading">
+        <img src="images/ROWING-KOSOVA-LOGO-RRETHORE-FINAL-1-1-2048x2048.png" alt="Rowing Kosova Logo" class="splash-logo" />
+    </div>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="#">Logo</a>
+                <a href="#">
+                    <img src="images/ROWING-KOSOVA-LOGO-RRETHORE-FINAL-1-1-2048x2048.png" alt="Rowing Kosova" class="nav-logo-img" />
+                </a>
             </div>
             <div class="nav-menu">
-                <a href="#introduction" class="nav-link">Introduction</a>
-                <a href="#section-x" class="nav-link">Services</a>
-                <a href="#section-y" class="nav-link">About</a>
+                <a href="#clubs" class="nav-link">Galeria</a>
+                <a href="#clubs-info" class="nav-link">Klubet</a>
+                <a href="#section-y" class="nav-link">Rreth Nesh</a>
             </div>
             <div class="burger-menu" id="burger-menu">
                 <div class="burger-bar"></div>
@@ -25,17 +30,17 @@
             </div>
         </div>
     </nav>
-
+    
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobile-menu">
-        <a href="#introduction" class="mobile-link">Introduction</a>
-        <a href="#section-x" class="mobile-link">Services</a>
+        <a href="#clubs" class="mobile-link">Galeria</a>
+        <a href="#clubs-info" class="mobile-link">Klubet</a>
         <a href="#section-y" class="mobile-link">About</a>
     </div>
-
+    
     <!-- Main Content -->
     <main>
-        <!-- Introduction Section -->
+        <!-- Introduction Section 
         <section id="introduction" class="section">
             <div class="container">
                 <h1>Welcome to Our Website</h1>
@@ -46,54 +51,190 @@
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
                 </div>
             </div>
-        </section>
+        </section>-->
 
-        <!-- Services Section -->
-        <section id="section-x" class="section">
+        <section id="clubs" class="section">
             <div class="container">
-                <h2>Our Services</h2>
-                <div class="services-grid">
-                    <div class="service-item">
-                        <h3>Service One</h3>
-                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                <div class="carousel" id="clubs-carousel">
+                    <div class="carousel-track">
+                        <div class="carousel-slide">
+                            <img src="https://picsum.photos/id/1015/1200/800" alt="Club image 1">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://picsum.photos/id/1025/1200/800" alt="Club image 2">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://picsum.photos/id/1035/1200/800" alt="Club image 3">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://picsum.photos/id/1045/1200/800" alt="Club image 4">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://picsum.photos/id/1055/1200/800" alt="Federation image">
+                        </div>
                     </div>
-                    <div class="service-item">
-                        <h3>Service Two</h3>
-                        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt.</p>
-                    </div>
-                    <div class="service-item">
-                        <h3>Service Three</h3>
-                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+                    <div class="carousel-zone carousel-zone-left" aria-label="Previous image"></div>
+                    <div class="carousel-zone carousel-zone-right" aria-label="Next image"></div>
+                    <div class="carousel-indicators">
+                        <button class="carousel-dot active" data-index="0" aria-label="Go to slide 1"></button>
+                        <button class="carousel-dot" data-index="1" aria-label="Go to slide 2"></button>
+                        <button class="carousel-dot" data-index="2" aria-label="Go to slide 3"></button>
+                        <button class="carousel-dot" data-index="3" aria-label="Go to slide 4"></button>
+                        <button class="carousel-dot" data-index="4" aria-label="Go to slide 5"></button>
                     </div>
                 </div>
-                <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+            </div>
+        </section>
+
+        <!-- Clubs Section -->
+        <section id="clubs-info" class="section">
+            <div class="container">
+                <h2>Klubet e Rowingut në Kosovë</h2>
+                <div class="clubs-grid">
+                    <div class="club-card">
+                        <div class="club-logo-placeholder">
+                            <!-- Space for club logo -->
+                            <img src="images/clubs/aqua-logo.png" alt="AQUA Logo" class="club-logo" onerror="this.style.display='none';">
+                        </div>
+                        <div class="club-content">
+                            <h3>Klubi Rowingut AQUA</h3>
+                            <div class="club-details">
+                                <p><strong>Shkurtesa:</strong> KRWA</p>
+                                <p><strong>Adresa:</strong> Deçan, Haki Povataj</p>
+                                <p><strong>Kryetar:</strong> Freskim Rizaj</p>
+                                <p><strong>Telefoni:</strong> +383 45 646 166</p>
+                                <p><strong>Email:</strong> <a href="mailto:freskim.rizaj@gmail.com">freskim.rizaj@gmail.com</a></p>
+                                <p><strong>Data e regjistrimit:</strong> 19/08/2021</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="club-card">
+                        <div class="club-logo-placeholder">
+                            <img src="images/clubs/bora-logo.png" alt="Bora Logo" class="club-logo" onerror="this.style.display='none';">
+                        </div>
+                        <div class="club-content">
+                            <h3>Klubi i Rowingut Bora</h3>
+                            <div class="club-details">
+                                <p><strong>Shkurtesa:</strong> ROWBORA</p>
+                                <p><strong>Adresa:</strong> Prizren, Edit Durham 65/2</p>
+                                <p><strong>Kryetar:</strong> Dardan Kushaj</p>
+                                <p><strong>Telefoni:</strong> +383 49 699 972</p>
+                                <p><strong>Email:</strong> <a href="mailto:dardankushaj23@gmail.com">dardankushaj23@gmail.com</a></p>
+                                <p><strong>Data e regjistrimit:</strong> 13/10/2023</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="club-card">
+                        <div class="club-logo-placeholder">
+                            <img src="images/clubs/prishtina-logo.png" alt="Prishtina Logo" class="club-logo" onerror="this.style.display='none';">
+                        </div>
+                        <div class="club-content">
+                            <h3>Klubi i Rowingut Prishtina</h3>
+                            <div class="club-details">
+                                <p><strong>Shkurtesa:</strong> ROWPR</p>
+                                <p><strong>Adresa:</strong> Prishtinë, Mujë Krasniqi nr 44</p>
+                                <p><strong>Kryetar:</strong> Mirland Gashi</p>
+                                <p><strong>Telefoni:</strong> +383 43 813 733</p>
+                                <p><strong>Email:</strong> <a href="mailto:mirlandgashi@gmail.com">mirlandgashi@gmail.com</a></p>
+                                <p><strong>Data e regjistrimit:</strong> 19/10/2023</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="club-card">
+                        <div class="club-logo-placeholder">
+                            <img src="images/clubs/mitrovica-logo.png" alt="Mitrovica Logo" class="club-logo" onerror="this.style.display='none';">
+                        </div>
+                        <div class="club-content">
+                            <h3>Klubi i Rowingut Mitrovica</h3>
+                            <div class="club-details">
+                                <p><strong>Shkurtesa:</strong> KRWM</p>
+                                <p><strong>Adresa:</strong> Mitrovicë, Rr.Fadil Deliqi</p>
+                                <p><strong>Kryetar:</strong> Flamur Mustafa</p>
+                                <p><strong>Telefoni:</strong> +383 49 832 010</p>
+                                <p><strong>Email:</strong> <a href="mailto:klubirowingutmitrovica@gmail.com">klubirowingutmitrovica@gmail.com</a></p>
+                                <p><strong>Data e regjistrimit:</strong> 04/06/2024</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="club-card">
+                        <div class="club-logo-placeholder">
+                            <img src="images/clubs/llapi-logo.png" alt="Llapi Logo" class="club-logo" onerror="this.style.display='none';">
+                        </div>
+                        <div class="club-content">
+                            <h3>Klubi i Rowingut Llapi</h3>
+                            <div class="club-details">
+                                <p><strong>Shkurtesa:</strong> KRWL</p>
+                                <p><strong>Adresa:</strong> Podujevë, Rr.Avdyl Ahmet Kamerolli</p>
+                                <p><strong>Kryetar:</strong> Fatlir Kamerolli</p>
+                                <p><strong>Telefoni:</strong> +383 49 573 977</p>
+                                <p><strong>Email:</strong> <a href="mailto:klubirowingutllapi@gmail.com">klubirowingutllapi@gmail.com</a></p>
+                                <p><strong>Data e regjistrimit:</strong> 08/10/2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- About Section -->
         <section id="section-y" class="section">
             <div class="container">
-                <h2>About Us</h2>
-                <p>Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.</p>
-                <div class="about-content">
-                    <div class="about-text">
-                        <h3>Our Story</h3>
-                        <p>Omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
-                        <p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+                <h2>Rreth Nesh</h2>
+                
+                <div class="federation-info">
+                    <h3>Federata për Rowing e Kosovës</h3>
+                    <div class="federation-purpose">
+                        <p>Qëllimi i Federatës për Rowing e Kosovës është promovimi dhe zhvillimi i sportit të Rowingut në të gjithë Republikën e Kosovës. Federata për Rowing e Kosovës organizon kampionate vendore dhe ndërkombëtare duke ndjekur rregullat dhe standardet e duhura për këtë sport. Gjithashtu punon për të inkurajuar pjesëmarrjen e anëtareve të rinjë në këtë sport duke përmirësuar infrastrukturen, nivelin e trajnimit për sportistët, trajnerët dhe gjyqtarët e këtij sporti.</p>
                     </div>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <h4>100+</h4>
-                            <p>Happy Clients</p>
+                    
+                    <div class="federation-details">
+                        <div class="federation-info-grid">
+                            <div class="federation-basic">
+                                <h4>Informata Bazike</h4>
+                                <p><strong>Shkurtesa:</strong> ROWING KOSOVA</p>
+                                <p><strong>Lloji:</strong> Shoqatë Sportive</p>
+                                <p><strong>Data e regjistrimit:</strong> 16/12/2024</p>
+                                <p><strong>Numri i regjistrit:</strong> 5120943-5</p>
+                            </div>
+                            
+                            <!-- <div class="federation-contact">
+                                <h4>Kontakti</h4>
+                                <p><strong>Adresa:</strong> Prishtinë, Rr. Agim Ramadani, Shtëpia e Sportit, kati 3</p>
+                                <p><strong>Kryetar:</strong> Kreshnik Limani</p>
+                                <p><strong>Telefoni:</strong> +383 43 766 677</p>
+                                <p><strong>Email:</strong> <a href="mailto:rowingkosova@gmail.com">rowingkosova@gmail.com</a></p>
+                            </div> -->
                         </div>
-                        <div class="stat-item">
-                            <h4>5+</h4>
-                            <p>Years Experience</p>
+                        
+                        <div class="federation-founders">
+                            <h4>Themeluesit</h4>
+                            <div class="founders-list">
+                                <span>Mirland Gashi</span>
+                                <span>Freskim Rizaj</span>
+                                <span>Dardan Kushaj</span>
+                                <span>Flamur Mustafa</span>
+                                <span>Fatlir Kamerolli</span>
+                            </div>
                         </div>
-                        <div class="stat-item">
-                            <h4>50+</h4>
-                            <p>Projects Completed</p>
-                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <h4>5</h4>
+                        <p>Klube Anëtare</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>2024</h4>
+                        <p>Viti i Themelimit</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>6</h4>
+                        <p>Qytete</p>
                     </div>
                 </div>
             </div>
@@ -105,33 +246,33 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Contact Information</h3>
+                    <h3>Informata të Kontaktit</h3>
                     <div class="contact-info">
-                        <p><strong>Email:</strong> contact@yourwebsite.com</p>
-                        <p><strong>Phone:</strong> +1 (555) 123-4567</p>
-                        <p><strong>Address:</strong> 123 Main Street, City, State 12345</p>
+                        <p><strong>Email:</strong> <a href="mailto:rowingkosova@gmail.com">rowingkosova@gmail.com</a></p>
+                        <p><strong>Telefoni:</strong> +383 43 766 677</p>
+                        <p><strong>Adresa:</strong> Prishtinë, Rr. Agim Ramadani, Shtëpia e Sportit, kati 3</p>
                     </div>
                 </div>
                 <div class="footer-section">
-                    <h3>Follow Us</h3>
+                    <h3>Na Ndiqni</h3>
                     <div class="social-links">
-                        <a href="#">Facebook</a>
-                        <a href="#">Twitter</a>
-                        <a href="#">LinkedIn</a>
-                        <a href="#">Instagram</a>
+                        <a href="#" aria-label="Facebook">Facebook</a>
+                        <a href="#" aria-label="Instagram">Instagram</a>
+                        <a href="#" aria-label="YouTube">YouTube</a>
+                        <a href="mailto:rowingkosova@gmail.com" aria-label="Email">Email</a>
                     </div>
                 </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
+                <!-- <div class="footer-section">
+                    <h3>Linqe të Shpejta</h3>
                     <div class="footer-links">
-                        <a href="#introduction">Introduction</a>
-                        <a href="#section-x">Services</a>
-                        <a href="#section-y">About</a>
+                        <a href="#clubs">Galeria</a>
+                        <a href="#clubs-info">Klubet</a>
+                        <a href="#section-y">Rreth Nesh</a>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 My Website. All rights reserved.</p>
+                <p>&copy; 2024 Federata për Rowing e Kosovës. Të gjitha të drejtat e rezervuara.</p>
             </div>
         </div>
     </footer>

@@ -53,6 +53,12 @@ body {
     color: #2563eb;
 }
 
+.nav-logo-img {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
 .nav-menu {
     display: flex;
     gap: 2rem;
@@ -80,7 +86,7 @@ body {
     height: 2px;
     bottom: -5px;
     left: 0;
-    background-color: #fbbf24;
+    background-color: #ffffff;
     transition: width 0.3s ease;
 }
 
@@ -174,7 +180,7 @@ body {
 
 /* Sections */
 .section {
-    padding: 100px 0;
+    padding: 70px 0;
 }
 
 .section:nth-child(even) {
@@ -235,25 +241,94 @@ p {
 }
 
 /* Services section */
-.services-grid {
+.clubs-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
-.service-item {
+.club-card {
     background-color: #ffffff;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-top: 3px solid #fbbf24;
+    border-top: 3px solid #2563eb;
+    position: relative;
 }
 
-.service-item:hover {
+.club-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.club-logo-placeholder {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    background-color: #f8fafc;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #e2e8f0;
+}
+
+.club-logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.club-content h3 {
+    color: #2563eb;
+    margin-bottom: 1rem;
+    padding-right: 60px; /* Space for logo */
+}
+
+.club-details p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.club-details a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.club-details a:hover {
+    text-decoration: underline;
+}
+
+.federation-info {
+    background-color: #f1f5f9;
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid #fbbf24;
+    margin-top: 2rem;
+}
+
+.federation-info h3 {
+    color: #2563eb;
+    margin-bottom: 1rem;
+}
+
+.federation-details p {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.federation-details a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.federation-details a:hover {
+    text-decoration: underline;
 }
 
 /* About section */
@@ -266,8 +341,9 @@ p {
 
 .about-stats {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     gap: 2rem;
+    margin-top: 3rem;
 }
 
 .stat-item {
@@ -276,11 +352,69 @@ p {
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 200px;
 }
 
 .stat-item p {
     color: #64748b;
     margin: 0;
+}
+
+.federation-purpose {
+    margin-bottom: 2rem;
+}
+
+.federation-purpose p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4a5568;
+}
+
+.federation-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.federation-basic h4,
+.federation-contact h4 {
+    color: #2563eb;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.federation-founders h4 {
+    color: #2563eb;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.founders-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.founders-list span {
+    background-color: #e2e8f0;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #2563eb;
+    font-weight: 500;
+}
+
+.contact-info a,
+.federation-details a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.contact-info a:hover,
+.federation-details a:hover {
+    text-decoration: underline;
 }
 
 /* Footer */
@@ -388,7 +522,7 @@ p {
     }
     
     .section {
-        padding: 70px 0 50px;
+        padding: 50px 0 50px;
     }
     
     .about-content {
@@ -429,6 +563,10 @@ p {
     
     .footer {
         padding: 2rem 0 1rem;
+    }
+
+    .nav-logo-img {
+        height: 32px;
     }
 }
 
@@ -582,4 +720,147 @@ p {
     .mobile-link {
         font-size: 0.95rem;
     }
+}
+
+/* Splash screen */
+.splash-screen {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    z-index: 2000;
+    opacity: 1;
+    transition: opacity 100ms ease;
+}
+
+.splash-screen.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.splash-logo {
+    width: min(60vw, 400px);
+    height: auto;
+}
+
+/* Prevent scrolling while splash visible */
+body.splash-active {
+    overflow: hidden;
 } 
+
+
+/*0b1a33*/
+
+/* Carousel */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    min-height: 400px;
+    background: #000000;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.carousel-track {
+    display: flex;
+    height: 100%;
+    transform: translateX(0);
+    transition: transform 400ms ease;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    height: 100%;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+
+.carousel-zone {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.carousel-zone-left {
+    left: 0;
+}
+
+.carousel-zone-right {
+    right: 0;
+}
+
+.carousel-zone-left:hover {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0));
+}
+
+.carousel-zone-right:hover {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0));
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 4;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 300ms ease;
+    padding: 0;
+}
+
+.carousel-dot:hover {
+    background: rgba(255, 255, 255, 0.6);
+    border-color: rgba(255, 255, 255, 0.9);
+    transform: scale(1.1);
+}
+
+.carousel-dot.active {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 255, 255, 0.9);
+    transform: scale(1.2);
+}
+
+@media (max-width: 480px) {
+    .carousel {
+        height: 60vh;
+        min-height: 300px;
+    }
+    
+    .carousel-indicators {
+        bottom: 12px;
+        gap: 6px;
+    }
+    
+    .carousel-dot {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+#clubs-info, #section-y{
+    padding: 50px 0;
+}
